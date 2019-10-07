@@ -1,0 +1,84 @@
+name Ixliam~
+id 1570276708
+know_index 10
+lastonflags online automap allowimmtalk~
+sex male~
+trust 100
+security 9
+played 15681
+logout_room 7359
+Race  drow~
+Class  mage~
+xp 2100
+short_descr `#`RThe `YEye `RTyrant`^~
+mxp_client_version . MXP="0.5" CLIENT=MUSHclient VERSION="4.94" REGISTERED=YES>~
+terminal_type mushclient~
+gold 100000
+silver 1000
+index 3
+host[0] brad-pc.attlocal.net~
+host[1] brad-pc.attlocal.net~
+host[2] brad-pc.attlocal.net~
+host[3] brad-pc.attlocal.net~
+host[4] brad-pc.attlocal.net~
+host[5] brad-pc.attlocal.net~
+host[6] brad-pc.attlocal.net~
+ip[0] 192.168.1.165~
+ip[1] 192.168.1.165~
+ip[2] 192.168.1.165~
+ip[3] 192.168.1.165~
+ip[4] 192.168.1.165~
+ip[5] 192.168.1.165~
+ip[6] 192.168.1.165~
+level[0] 100
+level[1] 100
+level[2] 100
+level[3] 100
+level[4] 100
+level[5] 100
+level[6] 100
+on[0] 1570303651
+on[1] 1570303738
+on[2] 1570303797
+on[3] 1570303893
+on[4] 1570284324
+on[5] 1570284336
+on[6] 1570284465
+off[0] 1570303708
+off[1] 1570303791
+off[2] 1570303812
+off[3] 1570310394
+off[4] 1570284325
+off[5] 1570284337
+off[6] 1570287017
+wiznet_type 1
+END
+
+name Ixthanost~
+id 1570284361
+know_index 11
+lastonflags automap allowimmtalk~
+sex male~
+played 48
+logout_room 7359
+Race  elf~
+Class  mage~
+xp 1250
+short_descr a male elf~
+mxp_client_version . MXP="0.5" CLIENT=MUSHclient VERSION="4.94" REGISTERED=YES>~
+terminal_type mushclient~
+silver 1000
+index 1
+host[0] brad-pc.attlocal.net~
+host[1] brad-pc.attlocal.net~
+ip[0] 192.168.1.165~
+ip[1] 192.168.1.165~
+level[0] 1
+level[1] 1
+on[0] 1570284390
+on[1] 1570303827
+off[0] 1570284409
+off[1] 1570303883
+END
+
+EOF~

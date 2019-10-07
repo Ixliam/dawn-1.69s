@@ -1,0 +1,6 @@
+12:23:51: `G39125`x,`Y17702`x,`B17705`x,`r5`x,`C0`x:do_mppurge(): no mob or object 'leaf' found in room to purge.
+12:53:53: `G31036`x,`Y31023`x,`B31026`x,`r1`x,`C0`x:Mpgoto - No such location '10049'.
+13:59:53: `G30103`x,`Y30102`x,`B30442`x,`r2`x,`C0`x:do_mppurge(): no mob or object 'magic' found in room to purge.
+14:47:54: `G39125`x,`Y17702`x,`B17705`x,`r5`x,`C0`x:do_mppurge(): no mob or object 'leaf' found in room to purge.
+19:35:55: `G39125`x,`Y17702`x,`B17705`x,`r5`x,`C0`x:do_mppurge(): no mob or object 'leaf' found in room to purge.
+20:05:57: `G31036`x,`Y31023`x,`B31026`x,`r1`x,`C0`x:Mpgoto - No such location '10049'.

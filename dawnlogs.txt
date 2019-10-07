@@ -1,0 +1,51 @@
+[24920] Sat Oct  5 11:58:17 :: ============================================
+[24920] Sat Oct  5 11:58:17 :: dawn logging to logs/game/4000-191005-01.log
+[24921] Sat Oct  5 11:58:18 :: dawn bindings =======================================================================[contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[24921] Sat Oct  5 12:15:42 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[24930] Sat Oct  5 12:15:42 :: ============================================
+[24930] Sat Oct  5 12:15:42 :: dawn logging to logs/game/4000-191005-02.log
+[24921] Sat Oct  5 12:15:44 :: hotreboot child mud is logging to logs/game/4000-191005-02.log
+[24921] Sat Oct  5 12:15:44 :: hotreboot child mud has a process id of 24931
+[24921] Sat Oct  5 12:15:44 :: hotreboot transfer accepted, parent shutting down.
+[24931] Sat Oct  5 12:15:44 :: dawn bindings [contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[24931] Sat Oct  5 13:26:36 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[26409] Sat Oct  5 13:26:36 :: ============================================
+[26409] Sat Oct  5 13:26:36 :: dawn logging to logs/game/4000-191005-03.log
+[24931] Sat Oct  5 13:26:38 :: hotreboot child mud is logging to logs/game/4000-191005-03.log
+[24931] Sat Oct  5 13:26:38 :: hotreboot child mud has a process id of 26410
+[24931] Sat Oct  5 13:26:38 :: hotreboot transfer accepted, parent shutting down.
+[26410] Sat Oct  5 13:26:38 :: dawn bindings [contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[26410] Sat Oct  5 13:33:33 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[26415] Sat Oct  5 13:33:33 :: ============================================
+[26415] Sat Oct  5 13:33:33 :: dawn logging to logs/game/4000-191005-04.log
+[26410] Sat Oct  5 13:33:35 :: hotreboot failed!
+[26948] Sat Oct  5 13:38:58 :: ============================================
+[26948] Sat Oct  5 13:38:58 :: dawn logging to logs/game/4000-191005-05.log
+[26949] Sat Oct  5 13:38:59 :: dawn bindings =======================================================================[contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[26949] Sat Oct  5 13:39:29 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[26953] Sat Oct  5 13:39:29 :: ============================================
+[26953] Sat Oct  5 13:39:29 :: dawn logging to logs/game/4000-191005-06.log
+[26949] Sat Oct  5 13:39:31 :: hotreboot failed!
+[26961] Sat Oct  5 13:45:44 :: ============================================
+[26961] Sat Oct  5 13:45:44 :: dawn logging to logs/game/4000-191005-07.log
+[26962] Sat Oct  5 13:45:45 :: dawn bindings (Finished) [18108] a lost, frightened child in [18100] Carnival Entrance: say I want my mommy!!! (say)`1Start input 14> [    0] Ixliam in [ 7359] New Player Recall Point: imcwho WOTL`1======INPUTTAIL LOG`1`x13:39:11 Ixliam<0> (14) R7359 C2 E0 '<a password of some kind - hidden>'`1`x13:39:12 Ixliam<0> (14) R7359 C13 E0 ' '`1`x13:39:12 Ixliam<0> (14) R7359 C14 E0 ' '`1`x13:39:13 Ixliam<0> (14) R7359 C14 E0 ' '`1`x13:39:14 Ixliam<0> (14) R7359 C0 E0 ' '`1`x13:39:15 Ixliam<0> (14) R7359 C0 E0 'imc'`1`x13:39:19 Ixliam<0> (14) R7359 C0 E0 'imcchanlist'`1`x13:39:24 Ixliam<0> (14) R7359 C0 E0 'imclisten all'`1`x13:39:26 Ixliam<0> (14) R7359 C0 E0 'who'`1`x13:39:29 Ixliam<0> (14) R7359 C0 E0 'hotreboot confirm'`1`x13:44:26 Ixliam<0> (14) R7359 C0 E0 'imc'`1`x13:44:29 Ixliam<0> (14) R7359 C0 E0 'imclist'`1`x13:44:44 Ixliam<0> (14) R7359 C0 E0 'imclisten all'`1`x13:44:47 Ixliam<0> (14) R7359 C0 E0 'imc'`1`x13:44:52 Ixliam<0> (14) R7359 C0 E0 'imcwho'`1`x13:44:59 Ixliam<0> (14) R7359 C0 E0 'imcwho'`1`x13:45:00 Ixliam<0> (14) R7359 C0 E0 'imclist'`1`x13:45:06 Ixliam<0> (14) R7359 C0 E0 'imcwho WWC'`1`x13:45:15 Ixliam<0> (14) R7359 C0 E0 'imcwho TheLand'`1`x13:45:25 Ixliam<0> (14) R7359 C0 E0 'imcwho WOTL'`1`xR = Room vnum, C = Connected state, E = olc editor mode... inputtail does not include force or ordered commands.`1`x-= Whispers of Times Lost was last compiled on Oct  5 2019 at 13:38:51 (c++ build)=-`1`x[contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[27448] Sat Oct  5 13:53:27 :: ============================================
+[27448] Sat Oct  5 13:53:27 :: dawn logging to logs/game/4000-191005-08.log
+[27449] Sat Oct  5 13:53:28 :: dawn bindings =======================================================================[contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[27449] Sat Oct  5 14:03:43 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[27934] Sat Oct  5 14:03:43 :: ============================================
+[27934] Sat Oct  5 14:03:43 :: dawn logging to logs/game/4000-191005-09.log
+[27449] Sat Oct  5 14:03:45 :: hotreboot child mud is logging to logs/game/4000-191005-09.log
+[27449] Sat Oct  5 14:03:45 :: hotreboot child mud has a process id of 27935
+[27449] Sat Oct  5 14:03:45 :: hotreboot transfer accepted, parent shutting down.
+[27935] Sat Oct  5 14:03:45 :: dawn bindings [contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[27935] Sat Oct  5 14:12:55 :: Starting hotreboot initiated by The Eye Tyrant (Ixliam) <100>
+[27950] Sat Oct  5 14:12:55 :: ============================================
+[27950] Sat Oct  5 14:12:55 :: dawn logging to logs/game/4000-191005-10.log
+[27935] Sat Oct  5 14:12:57 :: hotreboot child mud is logging to logs/game/4000-191005-10.log
+[27935] Sat Oct  5 14:12:57 :: hotreboot child mud has a process id of 27951
+[27935] Sat Oct  5 14:12:57 :: hotreboot transfer accepted, parent shutting down.
+[27951] Sat Oct  5 14:12:57 :: dawn bindings [contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
+[510] Sat Oct  5 19:25:05 :: ============================================
+[510] Sat Oct  5 19:25:05 :: dawn logging to logs/game/4000-191005-11.log
+[511] Sat Oct  5 19:25:06 :: dawn bindings =======================================================================[contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='telnet' protocol='ipv4' address='0.0.0.0' port='4000'][contype='http' protocol='ipv4' address='0.0.0.0' port='4001']
