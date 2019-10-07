@@ -1,9 +1,0 @@
-[ 7359] Ixliam: at Sat Oct  5 13:37:29 2019
- logs/admin/sd4000.txt was shutdown by Ixliam.
-===========================
-[ 7359] Ixliam: at Sat Oct  5 14:50:17 2019
- logs/admin/sd4000.txt was shutdown by Ixliam.
-===========================
-[ 3001] Ixliam: at Sat Oct  5 21:19:54 2019
- logs/admin/sd4000.txt was shutdown by Ixliam.
-===========================
