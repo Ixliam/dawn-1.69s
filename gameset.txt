@@ -1,4 +1,4 @@
-gamename Whispers of Times Lost~
+gamename Dawn~
 max_string 5340032
 listen_on telnet://:+0,http://:+1~
 area_import_format stock~
