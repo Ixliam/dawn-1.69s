@@ -9,7 +9,7 @@ L_FLAGS = $(PROF)
 LIBS	= -lz
 
 #IMC2 - Comment out to disable IMC2 support
-#IMC = 1
+IMC = 1
 
 O_FILES = \
 	act_comm.o act_ente.o act_info.o act_move.o act_obj.o \
