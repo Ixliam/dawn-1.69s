@@ -633,6 +633,10 @@ int main( int argc, char **argv )
 	main_argc=argc;
 	main_argv=argv;
 
+#ifdef IMC
+   int imcsocket = -1;
+#endif
+
 	runlevel=RUNLEVEL_BOOTING; // we are starting up
 	update_currenttime();
 
@@ -757,6 +761,13 @@ int main( int argc, char **argv )
    
 	update_alarm();
 
+#ifdef IMC
+	if(hotreboot_in_progress){
+		imc_startup( false, imcsocket, true );
+	} else
+		imc_startup( false, imcsocket, false );
+#endif
+
 	if(hotreboot_in_progress){
 		hotreboot_game_environment_transfer();
 	}
@@ -768,9 +779,6 @@ int main( int argc, char **argv )
 	
     runlevel=RUNLEVEL_MAIN_IO_LOOP;
 
-#ifdef IMC
-    	imc_startup( false, -1, false );
-#endif
 
 	game_loop();
 //    closesocket(control);

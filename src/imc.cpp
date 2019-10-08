@@ -4,6 +4,7 @@
  * Contributions by Johnathan Walker ( Xorith ), Copyright (C)2004
  * Additional contributions by Jesse Defer ( Garil ), Copyright (C)2004
  * Additional contributions by Rogel, Copyright (c) 2004
+ * Additional changes by Ixliam, Copyright (c) 2019
  * Comments and suggestions welcome: imc@imc2-intermud.org
  * License terms are available in the imc2freedom.license file.
  */
@@ -1212,6 +1213,9 @@ void imc_send_tell( string from, string to, string txt, int reply )
 {
    imc_packet *p;
 
+if (from == to) //Bit of a hack but prevents you sending your own tells
+	return;
+
    p = new imc_packet( from, "tell", to );
    p->data << "text=" << escape_string( txt );
    if( reply > 0 )
@@ -1724,6 +1728,9 @@ void imc_send_whoreply( string to, string txt )
 void imc_send_who( string from, string to, string type )
 {
    imc_packet *p;
+
+if (from == to) //Bit of a hack to prevent who on your own mud
+	return;
 
    p = new imc_packet( from, "who", to );
    p->data << "type=" << escape_string( type );
@@ -3124,13 +3131,6 @@ bool imc_loadchar( char_data * ch, FILE * fp, const char *word )
    {
       case 'I':
          KEY( "IMCPerm", IMCPERM( ch ), fread_number( fp ) );
-         STDSKEY( "IMCEmail", IMC_EMAIL( ch ) );
-         STDSKEY( "IMCAIM", IMC_AIM( ch ) );
-         KEY( "IMCICQ", IMC_ICQ( ch ), fread_number( fp ) );
-         STDSKEY( "IMCYahoo", IMC_YAHOO( ch ) );
-         STDSKEY( "IMCMSN", IMC_MSN( ch ) );
-         STDSKEY( "IMCHomepage", IMC_HOMEPAGE( ch ) );
-         STDSKEY( "IMCComment", IMC_COMMENT( ch ) );
          if( !strcasecmp( word, "IMCFlags" ) )
          {
             IMCFLAG( ch ) = fread_number( fp );
@@ -3231,20 +3231,6 @@ void imc_savechar( char_data * ch, FILE * fp )
       fprintf( fp, "IMCListen    %s\n", IMC_LISTEN( ch ).c_str(  ) );
    if( !IMC_DENY( ch ).empty(  ) )
       fprintf( fp, "IMCDeny      %s\n", IMC_DENY( ch ).c_str(  ) );
-   if( !IMC_EMAIL( ch ).empty(  ) )
-      fprintf( fp, "IMCEmail     %s\n", IMC_EMAIL( ch ).c_str(  ) );
-   if( !IMC_HOMEPAGE( ch ).empty(  ) )
-      fprintf( fp, "IMCHomepage  %s\n", IMC_HOMEPAGE( ch ).c_str(  ) );
-   if( IMC_ICQ( ch ) )
-      fprintf( fp, "IMCICQ       %d\n", IMC_ICQ( ch ) );
-   if( !IMC_AIM( ch ).empty(  ) )
-      fprintf( fp, "IMCAIM       %s\n", IMC_AIM( ch ).c_str(  ) );
-   if( !IMC_YAHOO( ch ).empty(  ) )
-      fprintf( fp, "IMCYahoo     %s\n", IMC_YAHOO( ch ).c_str(  ) );
-   if( !IMC_MSN( ch ).empty(  ) )
-      fprintf( fp, "IMCMSN       %s\n", IMC_MSN( ch ).c_str(  ) );
-   if( !IMC_COMMENT( ch ).empty(  ) )
-      fprintf( fp, "IMCComment   %s\n", IMC_COMMENT( ch ).c_str(  ) );
    for( ign = CH_IMCDATA( ch )->imc_ignore.begin(  ); ign != CH_IMCDATA( ch )->imc_ignore.end(  ); ign++ )
       fprintf( fp, "IMCignore    %s\n", ( *ign ).c_str(  ) );
    return;
@@ -4033,6 +4019,9 @@ bool imc_load_config( int desc )
 
    if( this_imcmud->details.empty(  ) )
       this_imcmud->details = "No details provided.";
+
+   if( this_imcmud->base.empty(  ) )
+      this_imcmud->details = "Dawn";
 
    lib_buf << IMC_VERSION_STRING << this_imcmud->base;
    this_imcmud->versionid = lib_buf.str(  );
@@ -5152,6 +5141,9 @@ IMC_CMD( imcreply )
 
    if( !check_mudof( ch, IMC_RREPLY( ch ) ) )
       return;
+
+   if (CH_IMCNAME(ch ) == IMC_RREPLY( ch )) // Check for sending yourself a tell which crashes mud
+	return;
 
    /*
     * Tell socials. Suggested by Darien@Sandstorm 
@@ -7031,6 +7023,7 @@ bool imc_command_hook( char_data * ch, char *command, char *argument )
    if( newarg.empty(  ) )
    {
       int y;
+
 
       imc_printf( ch, "`cThe last %d %s messages:\r\n", MAX_IMCHISTORY, c->local_name.c_str(  ) );
       for( y = 0; y < MAX_IMCHISTORY; y++ )

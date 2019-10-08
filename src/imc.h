@@ -4,6 +4,7 @@
  * Contributions by Johnathan Walker ( Xorith ), Copyright (C)2004
  * Additional contributions by Jesse Defer ( Garil ), Copyright (C)2004
  * Additional contributions by Rogel, Copyright (c) 2004
+ * Additional changes by Ixliam, Copyright (c) 2019
  * Comments and suggestions welcome: imc@imc2-intermud.org
  * License terms are available in the imc2freedom.license file.
  */
@@ -22,7 +23,7 @@ using namespace std;
  * This name was chosen to represent the ideals of not only the code, but of the
  * network which spawned it.
  */
-#define IMC_VERSION_STRING "Legends of Tulgard "
+#define IMC_VERSION_STRING "Dawn "
 #define IMC_VERSION 2
 
 /* Number of entries to keep in the channel histories */

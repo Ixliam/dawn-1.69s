@@ -1,0 +1,16 @@
+
+You can connect to the IMC2 network through one of the servers running *dalnet.
+Visit https://www.themud.org/imc2i3-routers.php to see which ones are running,
+and pick your local flavor. Make sure the IMC comment is used in the makefile
+to get IMC2 to compile. In the IMC directory, edit the config file to reflect
+your muds information.
+
+WARNINGS: Sending things from yourself to yourself, such as imctells and imcwho
+will crash the mud. Imcwho is only for admins, since it gives a "TRUE" list of 
+who is on the mud, including hidden/invis immortals. Imctell has been fixed so
+you cannot send a tell to yourself. 
+
+HOTREBOOTING: Once you hotreboot, you will need to manually reconnect to the
+network using imcconnect. 
+
+Ixliam - October 2019

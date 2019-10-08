@@ -748,6 +748,10 @@ void do_hotreboot(char_data* ch, char * argument)
 		return;
 	}
 
+#ifdef IMC
+   	imc_shutdown( false );
+#endif
+
 	// do all the auto saves
 	reboot_autosave( ch);
 
@@ -830,10 +834,6 @@ void do_hotreboot(char_data* ch, char * argument)
 
 		char child_pipe[10];
 		sprintf(child_pipe,"%d", hotreboot_pipes[HOTREBOOT_CHILD_PIPE]);
-
-#ifdef IMC
-   imc_hotboot();
-#endif
 
 		{
 			// start up the new mud process
