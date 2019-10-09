@@ -59,7 +59,7 @@ End
 #COMMAND
 Name      imcwho
 Code      imcwho
-Perm      Mort
+Perm      Admin
 Connected 1
 Alias     rwho
 End

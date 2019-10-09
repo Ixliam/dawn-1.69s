@@ -1213,9 +1213,27 @@ void imc_send_tell( string from, string to, string txt, int reply )
 {
    imc_packet *p;
 
-if (from == to) //Bit of a hack but prevents you sending your own tells
-	return;
+void imc_send_tell( string from, string to, string txt, int reply )
+{
+   imc_packet *p;
+   string mudto;
 
+   mudto = imc_mudof( to );
+
+   if( mudto == this_imcmud->localname )
+   {
+	imcbug( "%s: IMCTELL local error.", __FUNCTION__ ); // Check to make sure you don't crash by sending local tells
+        return;
+   }
+
+   p = new imc_packet( from, "tell", to );
+   p->data << "text=" << escape_string( txt );
+   if( reply > 0 )
+      p->data << " isreply=" << reply;
+   p->send(  );
+
+   return;
+}
    p = new imc_packet( from, "tell", to );
    p->data << "text=" << escape_string( txt );
    if( reply > 0 )
