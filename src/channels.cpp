@@ -526,6 +526,38 @@ void channel_generic_handler( int channel_index, char_data *ch, char *message)
 	strcpy(colour_free_message, strip_colour(message));
 	sprintf(colour_free_buf, cd->format, name, colour_free_message);
 
+	if(GAMESETTING5(GAMESET5_DISCORD_ENABLED ))
+	{
+		if(channel_index==gcn_ooc && str_len(message)!=1) // Discord OOC send to weblink
+		{
+			strcpy(dbuf, "./discord-notify.sh '");
+			add_buf(output, dbuf);
+			add_buf(output, "<");
+			add_buf(output, name);
+			add_buf(output, " OOC>: ");
+			strcpy(dbuf2, color_free_message);
+			add_buf(output, dbuf2);
+			strcpy(dbuf2, "'");
+			add_buf(output, dbuf2);
+			system(buf_string(output));
+		}
+
+		if(channel_index==gcn_newbietalk && str_len(message)!=1) // Discord Newbie send to weblink
+		{
+			strcpy(dbuf, "./discord-notify.sh '");
+			add_buf(output, dbuf);
+			add_buf(output, "<");
+			add_buf(output, name);
+			add_buf(output, " Newbietalks>: ");
+			strcpy(dbuf2, color_free_message);
+			add_buf(output, dbuf2);
+			strcpy(dbuf2, "'");
+			add_buf(output, dbuf2);
+			system(buf_string(output));
+		}
+	}
+
+
 	// loop thru all the players, sending the channel text to those appropriate
 	char_data *a; // a is the active char, who the channel is displayed to
 	for ( c = player_list; c; c=c->next_player )

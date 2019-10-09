@@ -193,6 +193,7 @@ const struct flag_type game_settings_flags5[] =
 	{ "prevent_players_naming_after_arealist_names",GAMESET5_PREVENT_PLAYERS_NAMING_AFTER_AREALIST_NAMES, true},
 	{ "keep_note_spools_indefinately",	GAMESET5_KEEP_NOTE_SPOOLS_INDEFINATELY, true},
 	{ "room_echoes_unseen_while_sleeping",	GAMESET5_ROOM_ECHOES_UNSEEN_WHILE_SLEEPING, true},
+	{ "use_discord_bot",			GAMESET5_DISCORD_ENABLED, 	true},
 	{ NULL,0,0}
 };
 

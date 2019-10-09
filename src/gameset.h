@@ -377,6 +377,7 @@ extern game_settings_type *game_settings;
 #define GAMESET5_PREVENT_PLAYERS_NAMING_AFTER_AREALIST_NAMES (X) 
 #define GAMESET5_KEEP_NOTE_SPOOLS_INDEFINATELY		(Y) 
 #define GAMESET5_ROOM_ECHOES_UNSEEN_WHILE_SLEEPING	(Z) 
+#define GAMESET5_DISCORD_ENABLED			(aa)
 
 /**************************************************************************/
 // Myridian Fields code

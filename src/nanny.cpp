@@ -725,6 +725,17 @@ void nanny_read_motd(connection_data *d, char *)
 		// tell everyone else
 		info_broadcast(ch, "Welcome %s, the newest traveler to this realm!", ch->name);
 		d->newbie_creating=false;
+		if(GAMESETTING5(GAMESET5_DISCORD_ENABLED ))
+		{
+			strcpy(dbuf, "./discord-notify.sh '");
+			add_buf(output, dbuf);
+			add_buf(output, "Welcome ");
+			add_buf(output, ch->name);
+			add_buf(output, ", the newest traveler to this realm!");
+			strcpy(dbuf2, "'");
+			add_buf(output, dbuf2);
+			system(buf_string(output));
+		}
 	}
 	
 	ch->beginning_remort=0;
