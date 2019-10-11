@@ -638,6 +638,7 @@ string imcgetname( char_data * ch, string from )
 
    if( mud == this_imcmud->localname )
       return name;
+
    return from;
 }
 
@@ -1212,28 +1213,16 @@ void imc_update_tellhistory( char_data * ch, string msg )
 void imc_send_tell( string from, string to, string txt, int reply )
 {
    imc_packet *p;
-
-void imc_send_tell( string from, string to, string txt, int reply )
-{
-   imc_packet *p;
    string mudto;
 
    mudto = imc_mudof( to );
 
    if( mudto == this_imcmud->localname )
    {
-	imcbug( "%s: IMCTELL local error.", __FUNCTION__ ); // Check to make sure you don't crash by sending local tells
+	imcbug( "%s: IMCTELL local error.", __FUNCTION__ );
         return;
    }
 
-   p = new imc_packet( from, "tell", to );
-   p->data << "text=" << escape_string( txt );
-   if( reply > 0 )
-      p->data << " isreply=" << reply;
-   p->send(  );
-
-   return;
-}
    p = new imc_packet( from, "tell", to );
    p->data << "text=" << escape_string( txt );
    if( reply > 0 )
@@ -1746,9 +1735,18 @@ void imc_send_whoreply( string to, string txt )
 void imc_send_who( string from, string to, string type )
 {
    imc_packet *p;
+   string mudfrom;
 
-if (from == to) //Bit of a hack to prevent who on your own mud
-	return;
+   mudfrom = imc_mudof(from );
+
+   if( mudfrom == to )
+      return;
+
+   if( to == this_imcmud->localname )
+      return;
+
+   if( to == from )
+      return;
 
    p = new imc_packet( from, "who", to );
    p->data << "type=" << escape_string( type );
